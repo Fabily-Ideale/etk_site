@@ -759,6 +759,331 @@ section {
   color: var(--color-accent);
 }
 
+/* Generic Presence Classes */
+.presence-sec {
+  border-top: 1px solid var(--border-light);
+}
+.presence-sec:nth-of-type(even) {
+  background-color: rgba(4, 100, 51, 0.02);
+}
+.presence-sec:nth-of-type(odd) {
+  background-color: rgba(200, 202, 51, 0.01);
+}
+.presence-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.presence-mockup {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.presence-text-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Google Review Mockup Styles */
+.google-card {
+  width: 100%;
+  max-width: 380px;
+  background-color: var(--color-bg-card);
+  border: 1.5px solid var(--color-accent);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(200, 202, 51, 0.1);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.google-biz-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(4, 100, 51, 0.15);
+  padding-bottom: 16px;
+}
+
+.google-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-accent);
+  overflow: hidden;
+}
+
+.google-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.google-biz-details h4 {
+  font-size: 16px;
+  color: var(--color-text);
+  margin-bottom: 2px;
+}
+
+.google-rating-summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.google-stars {
+  color: var(--color-accent);
+  letter-spacing: 1px;
+}
+
+.google-quick-actions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  text-align: center;
+  border-bottom: 1px solid rgba(4, 100, 51, 0.15);
+  padding-bottom: 16px;
+}
+
+.google-action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.google-action-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(4, 100, 51, 0.1);
+  border: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  transition: var(--transition);
+}
+
+.google-action-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.google-action-btn:hover .google-action-icon {
+  background-color: var(--color-accent);
+  color: var(--color-black);
+  border-color: var(--color-accent);
+}
+
+.google-review-box {
+  background-color: rgba(4, 100, 51, 0.08);
+  border: 1.5px solid var(--border-light);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.google-review-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.google-reviewer-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.google-reviewer-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.google-reviewer-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.google-review-date {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.google-review-stars {
+  color: var(--color-accent);
+  font-size: 11px;
+}
+
+.google-review-text {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+/* OLX Store Mockup Styles */
+.olx-card {
+  width: 100%;
+  max-width: 380px;
+  background-color: var(--color-bg-card);
+  border: 1.5px solid var(--color-accent);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(200, 202, 51, 0.1);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.olx-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border-bottom: 1px solid rgba(4, 100, 51, 0.15);
+}
+
+.olx-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-accent);
+  overflow: hidden;
+}
+
+.olx-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.olx-user-info h4 {
+  font-size: 14px;
+  color: var(--color-text);
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.olx-verified-badge {
+  font-size: 10px;
+  background-color: rgba(200, 202, 51, 0.15);
+  color: var(--color-accent);
+  padding: 1px 6px;
+  border-radius: 10px;
+  border: 0.5px solid var(--color-accent);
+}
+
+.olx-user-info p {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.olx-product-showcase {
+  position: relative;
+  aspect-ratio: 1.3;
+  background: linear-gradient(135deg, var(--color-black) 0%, rgba(200, 202, 51, 0.15) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(4, 100, 51, 0.15);
+  overflow: hidden;
+  padding: 20px;
+}
+
+.olx-product-showcase::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at bottom left, rgba(4, 100, 51, 0.1), transparent 70%);
+  pointer-events: none;
+}
+
+.olx-product-graphic {
+  z-index: 2;
+  color: var(--color-accent);
+  margin-bottom: 12px;
+  filter: drop-shadow(0 0 10px rgba(200, 202, 51, 0.4));
+}
+
+.olx-product-graphic svg {
+  width: 64px;
+  height: 64px;
+}
+
+.olx-product-details {
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.olx-product-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
+  font-family: var(--font-title);
+}
+
+.olx-product-price {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--color-accent);
+  font-family: var(--font-title);
+}
+
+.olx-card-footer {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.olx-location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.olx-location svg {
+  width: 12px;
+  height: 12px;
+  color: var(--color-accent);
+}
+
+.olx-badge-active {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
 /* SERVICOS PAGE STYLES */
 .servicos-hero-sec {
   padding-bottom: 20px;
@@ -1079,16 +1404,16 @@ footer {
     justify-content: center;
   }
   
-  .sobre-hero-grid, .instagram-grid, .home-about-grid {
+  .sobre-hero-grid, .instagram-grid, .presence-grid, .home-about-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
   
-  .instagram-grid {
+  .instagram-grid, .presence-grid {
     text-align: center;
   }
   
-  .instagram-mockup {
+  .instagram-mockup, .presence-mockup {
     order: -1;
   }
 }
