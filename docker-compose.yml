@@ -1,0 +1,18 @@
+services:
+  etk_site:
+    container_name: etk_site
+    build: .
+    restart: unless-stopped
+    mem_limit: 32m
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://127.0.0.1/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+    networks:
+      - etk_rede
+
+networks:
+  etk_rede:
+    external: true
