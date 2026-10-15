@@ -1205,8 +1205,8 @@ section {
 /* Floating WhatsApp Button */
 .whatsapp-float {
   position: fixed;
-  bottom: 32px;
-  right: 32px;
+  bottom: 108px;
+  right: 22px;
   width: 60px;
   height: 60px;
   background-color: #25d366;
@@ -1233,6 +1233,12 @@ section {
   border: 2px solid #25d366;
   opacity: 0.6;
   animation: pulseScale 1.8s infinite ease-out;
+  pointer-events: none;
+}
+
+.whatsapp-float--oculto {
+  opacity: 0;
+  visibility: hidden;
   pointer-events: none;
 }
 
@@ -1460,8 +1466,8 @@ footer {
   }
   
   .whatsapp-float {
-    bottom: 24px;
-    right: 24px;
+    bottom: 100px;
+    right: 26px;
     width: 52px;
     height: 52px;
   }
