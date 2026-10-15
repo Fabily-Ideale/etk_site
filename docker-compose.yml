@@ -13,6 +13,14 @@ services:
     networks:
       - etk_rede
 
+  cloudflared_site:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared_site
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run --token ${CLOUDFLARE_SITE_TOKEN}
+    networks:
+      - etk_rede
+
 networks:
   etk_rede:
     external: true
