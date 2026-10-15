@@ -14,6 +14,7 @@
     'suporte e servicos para computadores': 'grid-suporte-services',
     'servico de redes de computadores': 'grid-redes-services',
     'redes de computadores': 'grid-redes-services',
+    'servico de seguranca de computadores': 'grid-seguranca-comp-services',
     'seguranca de computadores': 'grid-seguranca-comp-services'
   };
 
