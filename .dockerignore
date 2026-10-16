@@ -1,6 +1,8 @@
 .git
 .gitignore
 .claude
+.env
+.env.*
 LICENSE
 README.md
 Dockerfile
