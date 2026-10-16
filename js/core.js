@@ -31,7 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 3. Floating WhatsApp link functionality is now handled natively via HTML href.
+  const ano_copyright = document.getElementById('ano-copyright');
+  if (ano_copyright) {
+    ano_copyright.textContent = new Date().getFullYear();
+  }
 
   const canvas_element = document.createElement('canvas');
   canvas_element.id = 'background-circuit-canvas';

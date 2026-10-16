@@ -1089,56 +1089,33 @@ section {
   padding-bottom: 20px;
 }
 
-/* Banner de Metas Futuras (Em Desenvolvimento) */
-.development-banner {
-  background-color: rgba(200, 202, 51, 0.06);
-  border: 1px dashed var(--color-accent);
-  border-radius: var(--border-radius);
-  padding: 24px 30px;
+.btn[hidden] {
+  display: none;
+}
+
+.servicos-atendimento {
   margin-top: 24px;
   display: flex;
-  align-items: center;
-  gap: 20px;
-  position: relative;
-  overflow: hidden;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
-.development-banner::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 4px;
-  background-color: var(--color-accent);
-}
-
-.dev-banner-icon {
-  flex-shrink: 0;
-  width: 48px;
-  height: 48px;
-  background-color: rgba(200, 202, 51, 0.15);
-  border-radius: 50%;
+.servicos-atendimento-item {
+  flex: 1 1 280px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-accent);
-  animation: glowPulse 2s infinite ease-in-out;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 20px 24px;
+  background-color: rgba(200, 202, 51, 0.06);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--color-accent);
+  border-radius: var(--border-radius);
 }
 
-.dev-banner-icon svg {
-  width: 24px;
-  height: 24px;
-}
-
-.dev-banner-content h4 {
-  font-size: 18px;
-  color: var(--color-text);
-  margin-bottom: 4px;
-}
-
-.dev-banner-content p {
-  font-size: 13.5px;
+.servicos-atendimento-item p {
+  margin: 0;
+  font-size: 15px;
   color: var(--color-text-muted);
 }
 

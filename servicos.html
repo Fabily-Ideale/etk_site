@@ -44,19 +44,16 @@
           <span class="section-tag">Nosso Catálogo</span>
           <h1 class="text-gradient-green" id="servicos-main-title">Soluções Completas sob Demanda.</h1>
           <p style="margin-top: 12px; font-size: 16px;">Conheça a grade de especialidades e serviços da Это-Тек. Desenvolvemos soluções com rigor analítico, de forma rápida, e focada em resultados concretos para o seu dia a dia.</p>
-          <b>Para consultar valores e agendar atendimentos, entre em contato via WhatsApp/Instagram.</b>
         </div>
 
-        <!-- Banner Em Desenvolvimento (Meta Futura de Backend) -->
-        <div class="development-banner" id="dev-banner-alert">
-          <div class="dev-banner-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-            </svg>
+        <div class="servicos-atendimento" id="servicos-atendimento">
+          <div class="servicos-atendimento-item" id="atendimento-duvidas">
+            <p><b>Dúvidas sobre valores ou serviços?</b> Converse com o nosso assistente de IA pelo chat, que atende você na hora.</p>
+            <button type="button" class="btn btn-primary" id="abrir-chat-ia" data-abrir-chat hidden>Abrir o Chat</button>
           </div>
-          <div class="dev-banner-content">
-            <h4>Solicitação Direta &amp; Agendamento Automatizado: Em Andamento</h4>
-            <p>Atualmente operamos de forma estática e eficiente. Um sistema de orçamentos e agendamentos com banco de dados dinâmico está planejado para uma futura etapa de desenvolvimento com backend dedicado.</p>
+          <div class="servicos-atendimento-item" id="atendimento-fechamento">
+            <p><b>Quer fechar um serviço?</b> Entre em contato conosco pelo WhatsApp.</p>
+            <a href="https://wa.me/5531998557532" class="btn btn-secondary" id="atendimento-whatsapp" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a>
           </div>
         </div>
       </div>
@@ -411,7 +408,7 @@
     </div>
     
     <div class="container footer-bottom">
-      <p class="copyright" id="footer-copyright">&copy; 2026 Это-Тек. Todos os direitos reservados.</p>
+      <p class="copyright" id="footer-copyright">&copy; <span id="ano-copyright">2026</span> Это-Тек. Todos os direitos reservados.</p>
       <div class="footer-socials" id="footer-socials-container">
         <a href="https://instagram.com/eto_tek" target="_blank" class="social-link" id="social-link-instagram" aria-label="Seguir a Это-Тек no Instagram">
           <svg viewBox="0 0 24 24" fill="currentColor">

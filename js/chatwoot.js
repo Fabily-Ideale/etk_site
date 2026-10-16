@@ -16,6 +16,22 @@
     }
   }
 
+  function alternar_botoes_chat(visivel) {
+    document.querySelectorAll('[data-abrir-chat]').forEach(function (botao) {
+      botao.hidden = !visivel;
+    });
+  }
+
+  document.addEventListener('click', function (evento) {
+    if (evento.target.closest('[data-abrir-chat]') && window.$chatwoot) {
+      window.$chatwoot.toggle('open');
+    }
+  });
+
+  window.addEventListener('chatwoot:ready', function () {
+    alternar_botoes_chat(true);
+  });
+
   window.addEventListener('chatwoot:opened', function () {
     alternar_whatsapp(true);
   });
