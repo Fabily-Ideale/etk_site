@@ -1119,6 +1119,10 @@ section {
   color: var(--color-text-muted);
 }
 
+.servicos-atendimento-item .btn {
+  margin-top: auto;
+}
+
 /* Category Sections */
 .servicos-cat-sec {
   border-top: 1px solid var(--border-light);
