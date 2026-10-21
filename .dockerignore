@@ -3,6 +3,7 @@
 .claude
 .env
 .env.*
+CLAUDE*.md
 LICENSE
 README.md
 Dockerfile

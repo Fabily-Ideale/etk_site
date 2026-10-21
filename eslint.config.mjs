@@ -33,7 +33,10 @@ export default [
       "valid-typeof": "error",
       "no-var": "error",
       "prefer-const": "error",
-      eqeqeq: "error"
+      eqeqeq: "error",
+      "no-eval": "error",
+      "no-implied-eval": "error",
+      "no-new-func": "error"
     }
   }
 ];
