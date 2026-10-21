@@ -4,14 +4,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const navMenu = document.getElementById('nav-menu');
 
   if (menuToggle && navMenu) {
+    const definir_menu = (aberto) => {
+      navMenu.classList.toggle('open', aberto);
+      menuToggle.setAttribute('aria-expanded', String(aberto));
+      menuToggle.setAttribute('aria-label', aberto ? 'Fechar menu de navegação' : 'Abrir menu de navegação');
+      menuToggle.innerHTML = aberto
+        ? `<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`
+        : `<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`;
+    };
+
     menuToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
-      
-      // Update toggle icon (hamburger vs close)
-      const isOpen = navMenu.classList.contains('open');
-      menuToggle.innerHTML = isOpen 
-        ? `<svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`
-        : `<svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`;
+      definir_menu(!navMenu.classList.contains('open'));
+    });
+
+    navMenu.addEventListener('click', (evento) => {
+      if (evento.target.closest('a')) {
+        definir_menu(false);
+      }
+    });
+
+    document.addEventListener('keydown', (evento) => {
+      if (evento.key === 'Escape' && navMenu.classList.contains('open')) {
+        definir_menu(false);
+        menuToggle.focus();
+      }
     });
   }
 
@@ -38,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const canvas_element = document.createElement('canvas');
   canvas_element.id = 'background-circuit-canvas';
+  canvas_element.setAttribute('aria-hidden', 'true');
   document.body.insertBefore(canvas_element, document.body.firstChild);
   const canvas_context = canvas_element.getContext('2d');
 
@@ -174,8 +191,27 @@ document.addEventListener('DOMContentLoaded', () => {
         active_circuits.push(create_circuit_drop());
       }
     }
-    requestAnimationFrame(animate_circuits);
+    id_quadro = requestAnimationFrame(animate_circuits);
   }
 
-  animate_circuits();
+  const preferencia_movimento = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let id_quadro = null;
+
+  function atualizar_animacao() {
+    const deve_animar = !preferencia_movimento.matches && document.visibilityState === 'visible';
+    if (deve_animar && id_quadro === null) {
+      id_quadro = requestAnimationFrame(animate_circuits);
+    } else if (!deve_animar && id_quadro !== null) {
+      window.cancelAnimationFrame(id_quadro);
+      id_quadro = null;
+      if (preferencia_movimento.matches) {
+        active_circuits.length = 0;
+        canvas_context.clearRect(0, 0, canvas_element.width, canvas_element.height);
+      }
+    }
+  }
+
+  preferencia_movimento.addEventListener('change', atualizar_animacao);
+  document.addEventListener('visibilitychange', atualizar_animacao);
+  atualizar_animacao();
 });

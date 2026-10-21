@@ -49,6 +49,7 @@
   --color-bg-nav: rgba(4, 4, 4, 0.85);
   --color-primary: #046433;
   --color-primary-rgb: 4, 100, 51;
+  --color-primary-claro: #2fa866;
   --color-accent: #c8ca33;
   --color-accent-rgb: 200, 202, 51;
   --color-text: #e0e6e3;
@@ -100,6 +101,44 @@ body::before {
   pointer-events: none;
 }
 
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.link-pular {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 1000;
+  padding: 12px 20px;
+  background-color: var(--color-accent);
+  color: var(--color-black);
+  font-family: var(--font-title);
+  font-weight: 700;
+  border-radius: var(--border-radius);
+}
+
+.link-pular:focus {
+  top: 16px;
+}
+
+main {
+  scroll-margin-top: 80px;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -127,13 +166,13 @@ p {
 }
 
 .text-gradient-green {
-  background: linear-gradient(135deg, var(--color-text) 30%, var(--color-primary) 100%);
+  background: linear-gradient(135deg, var(--color-text) 30%, var(--color-primary-claro) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-accent {
-  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary) 100%);
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary-claro) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -181,7 +220,7 @@ header {
 
 .logo-text {
   font-family: var(--font-title);
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 800;
   color: var(--color-text);
 }
@@ -200,7 +239,7 @@ header {
 .nav-link {
   font-family: var(--font-title);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--color-text-muted);
   position: relative;
   padding: 8px 0;
@@ -227,11 +266,15 @@ header {
 
 .menu-toggle {
   display: none;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
   background: none;
   border: none;
   color: var(--color-text);
   cursor: pointer;
-  padding: 4px;
+  padding: 8px;
 }
 
 .menu-toggle svg {
@@ -252,7 +295,7 @@ header {
   border-radius: var(--border-radius);
   font-family: var(--font-title);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   cursor: pointer;
   transition: var(--transition);
 }
@@ -299,7 +342,7 @@ section {
   color: var(--color-accent);
   font-family: var(--font-title);
   font-weight: 700;
-  font-size: 14px;
+  font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 12px;
@@ -307,7 +350,7 @@ section {
 }
 
 .section-title {
-  font-size: 36px;
+  font-size: 2.25rem;
   margin-bottom: 16px;
 }
 
@@ -341,20 +384,20 @@ section {
   border: 1px solid var(--border-light);
   padding: 6px 16px;
   border-radius: 50px;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   color: var(--color-accent);
   margin-bottom: 24px;
 }
 
 .hero-title {
-  font-size: 56px;
+  font-size: 3.5rem;
   line-height: 1.1;
   margin-bottom: 20px;
 }
 
 .hero-desc {
-  font-size: 18px;
+  font-size: 1.125rem;
   margin-bottom: 32px;
   max-width: 550px;
 }
@@ -460,7 +503,7 @@ section {
 }
 
 .about-feature-title {
-  font-size: 18px;
+  font-size: 1.125rem;
   color: var(--color-text);
   margin-bottom: 6px;
 }
@@ -532,13 +575,13 @@ section {
 }
 
 .pillar-card-title {
-  font-size: 20px;
+  font-size: 1.25rem;
   margin-bottom: 12px;
   color: var(--color-text);
 }
 
 .pillar-card-desc {
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-bottom: 20px;
   flex-grow: 1;
 }
@@ -549,7 +592,7 @@ section {
   gap: 6px;
   font-family: var(--font-title);
   font-weight: 700;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--color-accent);
 }
 
@@ -577,7 +620,7 @@ section {
 }
 
 .sobre-hero-content h1 {
-  font-size: 48px;
+  font-size: 3rem;
   margin-bottom: 24px;
 }
 
@@ -634,13 +677,13 @@ section {
 }
 
 .valor-title {
-  font-size: 18px;
+  font-size: 1.125rem;
   margin-bottom: 8px;
   color: var(--color-text);
 }
 
 .valor-desc {
-  font-size: 13.5px;
+  font-size: 0.84375rem;
 }
 
 /* Instagram Showcase Section */
@@ -704,14 +747,14 @@ section {
 }
 
 .ig-username {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
   color: var(--color-text);
 }
 
 .ig-badge {
   color: var(--color-accent);
-  font-size: 12px;
+  font-size: 0.8125rem;
 }
 
 .ig-content {
@@ -764,7 +807,7 @@ section {
 
 .ig-graphic-text {
   font-family: var(--font-title);
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--color-text);
   letter-spacing: 0.05em;
@@ -778,7 +821,7 @@ section {
   display: flex;
   gap: 16px;
   padding: 16px;
-  font-size: 20px;
+  font-size: 1.25rem;
   border-top: 1px solid rgba(4, 100, 51, 0.1);
   color: var(--color-text);
 }
@@ -788,14 +831,14 @@ section {
 }
 
 .ig-likes {
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 600;
   margin-bottom: 6px;
   display: block;
 }
 
 .ig-caption {
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 
 .ig-hashtag {
@@ -870,7 +913,7 @@ section {
   font-family: var(--font-title);
   font-weight: 700;
   line-height: 1.2;
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--color-text);
   margin-bottom: 2px;
 }
@@ -879,7 +922,7 @@ section {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: var(--color-text-muted);
 }
 
@@ -902,7 +945,7 @@ section {
   flex-direction: column;
   align-items: center;
   gap: 6px;
-  font-size: 11px;
+  font-size: 0.8125rem;
   color: var(--color-text-muted);
   font-weight: 500;
 }
@@ -957,7 +1000,7 @@ section {
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 0.8125rem;
 }
 
 .google-reviewer-info {
@@ -966,23 +1009,23 @@ section {
 }
 
 .google-reviewer-name {
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 600;
   color: var(--color-text);
 }
 
 .google-review-date {
-  font-size: 11px;
+  font-size: 0.8125rem;
   color: var(--color-text-muted);
 }
 
 .google-review-stars {
   color: var(--color-accent);
-  font-size: 11px;
+  font-size: 0.8125rem;
 }
 
 .google-review-text {
-  font-size: 12px;
+  font-size: 0.8125rem;
   line-height: 1.5;
   color: var(--color-text);
 }
@@ -1027,7 +1070,7 @@ section {
   font-family: var(--font-title);
   font-weight: 700;
   line-height: 1.2;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--color-text);
   margin-bottom: 2px;
   display: flex;
@@ -1036,7 +1079,7 @@ section {
 }
 
 .olx-verified-badge {
-  font-size: 10px;
+  font-size: 0.8125rem;
   background-color: rgba(200, 202, 51, 0.15);
   color: var(--color-accent);
   padding: 1px 6px;
@@ -1045,7 +1088,7 @@ section {
 }
 
 .olx-user-info p {
-  font-size: 11px;
+  font-size: 0.8125rem;
   color: var(--color-text-muted);
 }
 
@@ -1094,14 +1137,14 @@ section {
 }
 
 .olx-product-title {
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 700;
   color: var(--color-text);
   font-family: var(--font-title);
 }
 
 .olx-product-price {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 800;
   color: var(--color-accent);
   font-family: var(--font-title);
@@ -1112,7 +1155,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 12px;
+  font-size: 0.8125rem;
   color: var(--color-text-muted);
 }
 
@@ -1164,7 +1207,7 @@ section {
 
 .servicos-atendimento-item p {
   margin: 0;
-  font-size: 15px;
+  font-size: 0.9375rem;
   color: var(--color-text-muted);
 }
 
@@ -1214,7 +1257,7 @@ section {
 
 .service-card-number {
   font-family: var(--font-title);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 700;
   color: var(--color-accent);
   background-color: rgba(200, 202, 51, 0.1);
@@ -1223,12 +1266,12 @@ section {
 }
 
 .service-card-title {
-  font-size: 18px;
+  font-size: 1.125rem;
   color: var(--color-text);
 }
 
 .service-card-desc {
-  font-size: 14px;
+  font-size: 0.875rem;
   flex-grow: 1;
 }
 
@@ -1308,7 +1351,7 @@ footer {
 }
 
 .footer-desc {
-  font-size: 14px;
+  font-size: 0.875rem;
   max-width: 400px;
 }
 
@@ -1320,7 +1363,7 @@ footer {
 
 .footer-nav-title {
   font-family: var(--font-title);
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   line-height: 1.2;
   text-transform: uppercase;
@@ -1336,7 +1379,7 @@ footer {
 }
 
 .footer-nav-link {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--color-text-muted);
 }
 
@@ -1356,7 +1399,7 @@ footer {
 }
 
 .copyright {
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: var(--color-text-muted);
 }
 
@@ -1366,8 +1409,8 @@ footer {
 }
 
 .social-link {
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   background-color: rgba(4, 100, 51, 0.1);
   border: 1px solid var(--border-light);
   border-radius: 8px;
@@ -1461,7 +1504,7 @@ footer {
   }
   
   .hero-title {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
   
   .hero-logo-img {
@@ -1470,7 +1513,7 @@ footer {
   }
   
   .menu-toggle {
-    display: block;
+    display: flex;
   }
   
   .nav-menu {
@@ -1484,11 +1527,13 @@ footer {
     padding: 48px 24px;
     gap: 24px;
     border-top: 1px solid var(--border-light);
+    visibility: hidden;
     transition: var(--transition);
   }
   
   .nav-menu.open {
     left: 0;
+    visibility: visible;
   }
   
   .footer-grid {
@@ -1506,6 +1551,19 @@ footer {
   .whatsapp-float svg {
     width: 28px;
     height: 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
   }
 }
 

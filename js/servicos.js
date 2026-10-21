@@ -114,7 +114,20 @@
     });
   };
 
+  const definir_ocupado = (ocupado) => {
+    for (const id_grid of ids_grids) {
+      const grid = document.getElementById(id_grid);
+      if (grid) grid.setAttribute('aria-busy', String(ocupado));
+    }
+  };
+
+  const anunciar_status = (mensagem) => {
+    const status = document.getElementById('servicos-status');
+    if (status) status.textContent = mensagem;
+  };
+
   const carregar_servicos = async () => {
+    definir_ocupado(true);
     try {
       const resposta = await fetch('/servicos.json', {
         headers: { Accept: 'application/json' },
@@ -129,8 +142,11 @@
       if (agrupado.size === 0) return;
 
       renderizar(agrupado);
+      anunciar_status('Lista de serviços atualizada.');
     } catch (erro) {
       console.warn('Lista de servicos indisponivel, mantendo conteudo estatico:', erro.name);
+    } finally {
+      definir_ocupado(false);
     }
   };
 

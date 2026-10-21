@@ -27,31 +27,34 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+  <a href="#conteudo" class="link-pular">Pular para o conteúdo</a>
 
   <!-- Navigation Header -->
   <header id="main-header">
     <div class="container nav-container">
       <a href="index.html" class="logo-link" id="nav-logo-link">
         <img src="assets/images/logo_etk.jpg" alt="" class="logo-img">
-        <span class="logo-text">Это-Тек</span>
+        <span class="logo-text" lang="ru">Это-Тек</span>
       </a>
       
-      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu de navegação">
-        <svg viewBox="0 0 24 24">
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Abrir menu de navegação" aria-controls="nav-menu" aria-expanded="false">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
           <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </svg>
       </button>
 
+      <nav aria-label="Principal">
       <ul class="nav-menu" id="nav-menu">
         <li><a href="index.html" class="nav-link" id="link-home">Home</a></li>
         <li><a href="sobre.html" class="nav-link" id="link-sobre">Quem Somos</a></li>
         <li><a href="servicos.html" class="nav-link" id="link-servicos">Serviços</a></li>
       </ul>
+      </nav>
     </div>
   </header>
 
   <!-- Main Content Area -->
-  <main>
+  <main id="conteudo">
     
     <!-- About Hero Section -->
     <section class="sobre-hero-sec" id="sobre-hero">
@@ -59,7 +62,7 @@
         <div class="sobre-hero-content">
           <span class="section-tag">Nossa Trajetória</span>
           <h1 class="text-gradient-green" id="sobre-main-title">Humanizando a Tecnologia.</h1>
-          <p style="margin-bottom: 18px; font-size: 17px; color: var(--color-text);">A <strong>Это-Тек</strong> (identificada pelo perfil digital <strong>@eto_tek</strong>) foi fundada em 2025 com o propósito de aproximar as pessoas e as pequenas empresas da tecnologia de alta performance.</p>
+          <p style="margin-bottom: 18px; font-size: 1.0625rem; color: var(--color-text);">A <strong>Это-Тек</strong> (identificada pelo perfil digital <strong>@eto_tek</strong>) foi fundada em 2025 com o propósito de aproximar as pessoas e as pequenas empresas da tecnologia de alta performance.</p>
           <p style="margin-bottom: 18px;">Percebemos que o mercado de TI muitas vezes afasta o cliente comum devido ao uso excessivo de termos técnicos complexos e diagnósticos vagos. Decidimos quebrar essa barreira de forma pragmática.</p>
           <p style="margin-bottom: 24px;">Garantimos que você entenda exatamente o que está acontecendo com seus computadores e sistemas, explicando a causa real dos problemas com humor inteligente e empatia. Transformamos gargalos tecnológicos em fluxos de trabalho eficientes.</p>
         </div>
@@ -85,7 +88,7 @@
           <!-- Missão -->
           <div class="valor-card" id="valor-card-missao">
             <div class="valor-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
               </svg>
             </div>
@@ -96,7 +99,7 @@
           <!-- Visão -->
           <div class="valor-card" id="valor-card-visao">
             <div class="valor-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
               </svg>
             </div>
@@ -107,7 +110,7 @@
           <!-- Valores - Integridade -->
           <div class="valor-card" id="valor-card-integridade">
             <div class="valor-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
                 <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
               </svg>
@@ -119,7 +122,7 @@
           <!-- Valores - Transparência -->
           <div class="valor-card" id="valor-card-transparencia">
             <div class="valor-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
                 <polyline points="22 4 12 14.01 9 11.01"/>
               </svg>
@@ -152,7 +155,7 @@
             <div class="ig-content">
               <div class="ig-graphic">
                 <div class="ig-graphic-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
@@ -183,7 +186,7 @@
           <p style="margin-bottom: 24px;">Uma forma descontraída e informativa de aproximar você e sua empresa das melhores práticas de tecnologia.</p>
           
           <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-            <a href="https://instagram.com/eto_tek" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="ig-cta-button">Seguir no Instagram</a>
+            <a href="https://instagram.com/eto_tek" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="ig-cta-button">Seguir no Instagram<span class="sr-only"> (abre em nova aba)</span></a>
           </div>
         </div>
 
@@ -202,7 +205,7 @@
           <p style="margin-bottom: 24px;">Deixe também sua avaliação e ajude a consolidar nosso suporte técnico humanizado e acessível!</p>
           
           <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-            <a href="https://g.page/r/CdzhImuVLCRQEBM/review" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="google-cta-button">Deixar Avaliação no Google</a>
+            <a href="https://g.page/r/CdzhImuVLCRQEBM/review" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="google-cta-button">Deixar Avaliação no Google<span class="sr-only"> (abre em nova aba)</span></a>
           </div>
         </div>
 
@@ -226,7 +229,7 @@
             <div class="google-quick-actions">
               <div class="google-action-btn">
                 <div class="google-action-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                   </svg>
                 </div>
@@ -234,7 +237,7 @@
               </div>
               <div class="google-action-btn">
                 <div class="google-action-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <polygon points="3 11 22 2 13 21 11 13 3 11"/>
                   </svg>
                 </div>
@@ -242,7 +245,7 @@
               </div>
               <div class="google-action-btn">
                 <div class="google-action-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <circle cx="18" cy="5" r="3"></circle>
                     <circle cx="6" cy="12" r="3"></circle>
                     <circle cx="18" cy="19" r="3"></circle>
@@ -254,7 +257,7 @@
               </div>
               <div class="google-action-btn">
                 <div class="google-action-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                   </svg>
                 </div>
@@ -299,7 +302,7 @@
             
             <div class="olx-product-showcase">
               <div class="olx-product-graphic">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
                   <line x1="8" y1="21" x2="16" y2="21"/>
                   <line x1="12" y1="17" x2="12" y2="21"/>
@@ -313,7 +316,7 @@
             
             <div class="olx-card-footer">
               <span class="olx-location">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/>
                   <circle cx="12" cy="10" r="3"/>
                 </svg>
@@ -333,7 +336,7 @@
           <p style="margin-bottom: 24px;">Encontre hardware de procedência com total garantia e segurança de negociação local.</p>
           
           <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-            <a href="https://www.olx.com.br/perfil/eto-tek-90445063" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="olx-cta-button">Visitar Loja na OLX</a>
+            <a href="https://www.olx.com.br/perfil/eto-tek-90445063" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="olx-cta-button">Visitar Loja na OLX<span class="sr-only"> (abre em nova aba)</span></a>
           </div>
         </div>
 
@@ -343,8 +346,8 @@
   </main>
 
   <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/5531998557532" class="whatsapp-float" id="whatsapp-floating-action" aria-label="Entrar em contato pelo WhatsApp" target="_blank" rel="noopener noreferrer">
-    <svg viewBox="0 0 24 24">
+  <a href="https://wa.me/5531998557532" class="whatsapp-float" id="whatsapp-floating-action" aria-label="Entrar em contato pelo WhatsApp (abre em nova aba)" target="_blank" rel="noopener noreferrer">
+    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
       <path d="M12.01 2.01c-5.52 0-10 4.48-10 10 0 1.77.46 3.42 1.27 4.88L2 22l5.3-1.27c1.4.77 3 1.21 4.7 1.21 5.52 0 10-4.48 10-10 0-5.52-4.47-10-9.99-10zm5.18 14.18c-.28.77-1.4 1.4-1.96 1.4-.56 0-1.12-.28-3.36-1.21-2.8-1.21-4.62-4.06-4.76-4.25-.14-.19-1.12-1.48-1.12-2.83a2.9 2.9 0 0 1 .93-2.16c.28-.28.56-.42.84-.42.14 0 .28 0 .42.06.14.06.28.14.42.42.28.7 1.12 2.76 1.21 2.9.09.19.09.37 0 .56-.09.19-.28.37-.42.56-.14.14-.28.32-.14.56.56 1.03 1.26 1.87 2.06 2.48.8.61 1.63.93 2.29.93.37 0 .65-.19.84-.37.28-.28.84-.93.93-1.21.09-.28.28-.37.47-.28.23.09 1.49.7 1.77.84.28.14.47.28.56.42.09.14.09.7-.19 1.48z"/>
     </svg>
   </a>
@@ -355,38 +358,38 @@
       <div class="footer-brand" id="footer-brand-container">
         <a href="index.html" class="logo-link" style="margin-bottom: 8px;">
           <img src="assets/images/logo_etk.jpg" alt="" class="logo-img">
-          <span class="logo-text">Это-Тек</span>
+          <span class="logo-text" lang="ru">Это-Тек</span>
         </a>
         <p class="footer-desc">Soluções digitais em TI, produtividade e suporte tecnológico humanizado de alta performance. Elevando os resultados de particulares e corporações.</p>
       </div>
       
-      <div class="footer-nav" id="footer-nav-container">
+      <nav class="footer-nav" id="footer-nav-container" aria-label="Rodapé">
         <p class="footer-nav-title">Navegação</p>
         <ul class="footer-nav-links">
           <li><a href="index.html" class="footer-nav-link" id="footer-link-home">Início</a></li>
           <li><a href="sobre.html" class="footer-nav-link" id="footer-link-sobre">Quem Somos</a></li>
           <li><a href="servicos.html" class="footer-nav-link" id="footer-link-servicos">Catálogo de Serviços</a></li>
         </ul>
-      </div>
+      </nav>
     </div>
     
     <div class="container footer-bottom">
-      <p class="copyright" id="footer-copyright">&copy; <span id="ano-copyright">2026</span> Это-Тек. Todos os direitos reservados.</p>
+      <p class="copyright" id="footer-copyright">&copy; <span id="ano-copyright">2026</span> <span lang="ru">Это-Тек</span>. Todos os direitos reservados.</p>
       <div class="footer-socials" id="footer-socials-container">
-        <a href="https://instagram.com/eto_tek" target="_blank" rel="noopener noreferrer" class="social-link" id="social-link-instagram" aria-label="Seguir a Это-Тек no Instagram">
-          <svg viewBox="0 0 24 24" fill="currentColor">
+        <a href="https://instagram.com/eto_tek" target="_blank" rel="noopener noreferrer" class="social-link" id="social-link-instagram" aria-label="Seguir a Eto-Tek no Instagram (abre em nova aba)">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
           </svg>
         </a>
-        <a href="https://www.olx.com.br/perfil/eto-tek-90445063" target="_blank" rel="noopener noreferrer" class="social-link" id="social-link-olx" aria-label="Perfil da Это-Тек na OLX">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <a href="https://www.olx.com.br/perfil/eto-tek-90445063" target="_blank" rel="noopener noreferrer" class="social-link" id="social-link-olx" aria-label="Perfil da Eto-Tek na OLX (abre em nova aba)">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
             <line x1="3" y1="6" x2="21" y2="6"></line>
             <path d="M16 10a4 4 0 0 1-8 0"></path>
           </svg>
         </a>
-        <a href="https://g.page/r/CdzhImuVLCRQEBM/review" target="_blank" rel="noopener noreferrer" class="social-link" id="social-link-maps" aria-label="Avaliações no Google Maps">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <a href="https://g.page/r/CdzhImuVLCRQEBM/review" target="_blank" rel="noopener noreferrer" class="social-link" id="social-link-maps" aria-label="Avaliações no Google Maps (abre em nova aba)">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
             <circle cx="12" cy="10" r="3"></circle>
           </svg>

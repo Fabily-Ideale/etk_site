@@ -6,7 +6,7 @@
   window.chatwootSettings = {
     position: 'right',
     type: 'standard',
-    launcherTitle: ''
+    launcherTitle: 'Converse com nosso assistente'
   };
 
   function alternar_whatsapp(oculto) {
