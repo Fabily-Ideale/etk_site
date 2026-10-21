@@ -24,6 +24,8 @@
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "@id": "https://etotek.com.br/#empresa", "name": "Это-Тек", "alternateName": "Eto-Tek", "url": "https://etotek.com.br/", "logo": "https://etotek.com.br/assets/images/icone_512.png", "image": "https://etotek.com.br/assets/images/og_etk.jpg", "telephone": "+55-31-99855-7532", "sameAs": ["https://instagram.com/eto_tek", "https://www.olx.com.br/perfil/eto-tek-90445063", "https://g.page/r/CdzhImuVLCRQEBM"]}</script>
   
   <!-- CSS Link -->
+    <link rel="preload" href="assets/fonts/inter_latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/outfit_latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -33,7 +35,7 @@
   <header id="main-header">
     <div class="container nav-container">
       <a href="index.html" class="logo-link" id="nav-logo-link">
-        <img src="assets/images/logo_etk.jpg" alt="" class="logo-img">
+        <picture><source srcset="assets/images/logo_etk_80.webp" type="image/webp"><img src="assets/images/logo_etk_80.jpg" alt="" class="logo-img" width="80" height="80" decoding="async"></picture>
         <span class="logo-text" lang="ru">Это-Тек</span>
       </a>
       
@@ -61,7 +63,7 @@
       <div class="container hero-grid">
         <div class="hero-content">
           <div class="hero-tag" id="hero-tag-badge">
-            <svg aria-hidden="true" focusable="false" style="width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2;" viewBox="0 0 24 24">
+            <svg aria-hidden="true" focusable="false" class="icone-tag" viewBox="0 0 24 24">
               <polygon points="12 2 2 7 12 12 22 7 12 2"/>
               <polyline points="2 17 12 22 22 17"/>
               <polyline points="2 12 12 17 22 12"/>
@@ -72,11 +74,12 @@
           <p class="hero-desc" id="main-slogan">Traduzimos a complexidade do universo digital em soluções eficientes, transparentes e sob medida para você ou sua empresa.</p>
           <div class="hero-actions">
             <a href="servicos.html" class="btn btn-primary" id="hero-cta-services">Ver Serviços</a>
+            <a href="https://wa.me/5531998557532" class="btn btn-secondary" id="hero-cta-contato" target="_blank" rel="noopener noreferrer">Fale Conosco<span class="sr-only"> (abre em nova aba)</span></a>
           </div>
         </div>
         <div class="hero-visual" id="hero-brand-visual">
           <div class="logo-glow-wrapper">
-            <img src="assets/images/logo_etk.jpg" alt="Logotipo Это-Тек em padrão de circuito" class="hero-logo-img" id="hero-logo">
+            <picture><source srcset="assets/images/logo_etk_440.avif" type="image/avif"><source srcset="assets/images/logo_etk_440.webp" type="image/webp"><img src="assets/images/logo_etk_440.jpg" alt="Logotipo Это-Тек em padrão de circuito" width="440" height="440" class="hero-logo-img" id="hero-logo" fetchpriority="high"></picture>
           </div>
         </div>
       </div>
@@ -88,8 +91,8 @@
         <div class="about-text-content">
           <span class="section-tag">Descomplicando a TI</span>
           <h2 class="section-title text-gradient-accent" id="about-section-title">Quem é a <span lang="ru">Это-Тек</span>?</h2>
-          <p style="margin-bottom: 20px;">A <strong>Это-Тек</strong> nasceu da missão de desmistificar o suporte técnico e otimizar a infraestrutura digital de particulares e pequenas empresas. Acreditamos que o rigor técnico não precisa ser acompanhado por um vocabulário impenetrável ("tecniquês").</p>
-          <p style="margin-bottom: 24px;">Combinamos eficácia, transparência em diagnósticos de hardware e desenvolvimento ágil com uma comunicação humana, leve e divertida. Seus computadores mais rápidos, seus dados seguros e seus fluxos de trabalho totalmente automatizados.</p>
+          <p class="mb-20">A <strong>Это-Тек</strong> nasceu da missão de desmistificar o suporte técnico e otimizar a infraestrutura digital de particulares e pequenas empresas. Acreditamos que o rigor técnico não precisa ser acompanhado por um vocabulário impenetrável ("tecniquês").</p>
+          <p class="mb-24">Combinamos eficácia, transparência em diagnósticos de hardware e desenvolvimento ágil com uma comunicação humana, leve e divertida. Seus computadores mais rápidos, seus dados seguros e seus fluxos de trabalho totalmente automatizados.</p>
           <a href="sobre.html" class="btn btn-secondary" id="about-read-more">Nossos Valores</a>
         </div>
         <div class="about-features" id="about-features-container">
@@ -104,7 +107,7 @@
             </div>
             <div>
               <h3 class="about-feature-title">Foco em Suporte Real</h3>
-              <p style="font-size: 0.875rem;">Diagnósticos claros, manutenção física e lógica de alto desempenho para manter seus computadores rápidos de verdade.</p>
+              <p class="texto-pequeno">Diagnósticos claros, manutenção física e lógica de alto desempenho para manter seus computadores rápidos de verdade.</p>
             </div>
           </div>
 
@@ -118,7 +121,7 @@
             </div>
             <div>
               <h3 class="about-feature-title">Produtividade Máxima</h3>
-              <p style="font-size: 0.875rem;">Automação com planilhas Excel/Google Sheets, scripts corporativos sob medida e integrações de Inteligência Artificial.</p>
+              <p class="texto-pequeno">Automação com planilhas Excel/Google Sheets, scripts corporativos sob medida e integrações de Inteligência Artificial.</p>
             </div>
           </div>
 
@@ -243,7 +246,7 @@
             </div>
             <h3 class="pillar-card-title">Novas Soluções</h3>
             <p class="pillar-card-desc">Estamos em constante busca por novas frentes de atuação e soluções inovadoras para expandir nosso portfólio de suporte e serviços de tecnologia.</p>
-            <div class="pillar-card-link-placeholder" style="color: var(--color-accent); font-family: var(--font-title); font-weight: 700; font-size: 0.875rem; margin-top: auto; display: inline-flex; align-items: center; gap: 6px;">
+            <div class="pillar-card-link-placeholder">
               Em breve...
             </div>
           </div>
@@ -265,8 +268,8 @@
   <footer id="main-footer">
     <div class="container footer-grid">
       <div class="footer-brand" id="footer-brand-container">
-        <a href="index.html" class="logo-link" style="margin-bottom: 8px;">
-          <img src="assets/images/logo_etk.jpg" alt="" class="logo-img">
+        <a href="index.html" class="logo-link mb-8">
+          <picture><source srcset="assets/images/logo_etk_80.webp" type="image/webp"><img src="assets/images/logo_etk_80.jpg" alt="" class="logo-img" width="80" height="80" loading="lazy" decoding="async"></picture>
           <span class="logo-text" lang="ru">Это-Тек</span>
         </a>
         <p class="footer-desc">Soluções digitais em TI, produtividade e suporte tecnológico humanizado de alta performance. Elevando os resultados de particulares e corporações.</p>
@@ -308,7 +311,7 @@
   </footer>
 
   <!-- JS Link -->
-  <script src="js/core.js"></script>
+  <script src="js/core.js" defer></script>
   <script src="js/chatwoot.js" defer></script>
 </body>
 </html>

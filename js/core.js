@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (menuToggle && navMenu) {
     const definir_menu = (aberto) => {
       navMenu.classList.toggle('open', aberto);
+      document.body.classList.toggle('menu-aberto', aberto);
       menuToggle.setAttribute('aria-expanded', String(aberto));
       menuToggle.setAttribute('aria-label', aberto ? 'Fechar menu de navegação' : 'Abrir menu de navegação');
       menuToggle.innerHTML = aberto

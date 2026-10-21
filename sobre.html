@@ -24,6 +24,8 @@
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "AboutPage", "url": "https://etotek.com.br/sobre.html", "about": {"@id": "https://etotek.com.br/#empresa"}}</script>
   
   <!-- CSS Link -->
+    <link rel="preload" href="assets/fonts/inter_latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/outfit_latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -33,7 +35,7 @@
   <header id="main-header">
     <div class="container nav-container">
       <a href="index.html" class="logo-link" id="nav-logo-link">
-        <img src="assets/images/logo_etk.jpg" alt="" class="logo-img">
+        <picture><source srcset="assets/images/logo_etk_80.webp" type="image/webp"><img src="assets/images/logo_etk_80.jpg" alt="" class="logo-img" width="80" height="80" decoding="async"></picture>
         <span class="logo-text" lang="ru">Это-Тек</span>
       </a>
       
@@ -62,13 +64,13 @@
         <div class="sobre-hero-content">
           <span class="section-tag">Nossa Trajetória</span>
           <h1 class="text-gradient-green" id="sobre-main-title">Humanizando a Tecnologia.</h1>
-          <p style="margin-bottom: 18px; font-size: 1.0625rem; color: var(--color-text);">A <strong>Это-Тек</strong> (identificada pelo perfil digital <strong>@eto_tek</strong>) foi fundada em 2025 com o propósito de aproximar as pessoas e as pequenas empresas da tecnologia de alta performance.</p>
-          <p style="margin-bottom: 18px;">Percebemos que o mercado de TI muitas vezes afasta o cliente comum devido ao uso excessivo de termos técnicos complexos e diagnósticos vagos. Decidimos quebrar essa barreira de forma pragmática.</p>
-          <p style="margin-bottom: 24px;">Garantimos que você entenda exatamente o que está acontecendo com seus computadores e sistemas, explicando a causa real dos problemas com humor inteligente e empatia. Transformamos gargalos tecnológicos em fluxos de trabalho eficientes.</p>
+          <p class="sobre-lead">A <strong>Это-Тек</strong> (identificada pelo perfil digital <strong>@eto_tek</strong>) foi fundada em 2025 com o propósito de aproximar as pessoas e as pequenas empresas da tecnologia de alta performance.</p>
+          <p class="mb-18">Percebemos que o mercado de TI muitas vezes afasta o cliente comum devido ao uso excessivo de termos técnicos complexos e diagnósticos vagos. Decidimos quebrar essa barreira de forma pragmática.</p>
+          <p class="mb-24">Garantimos que você entenda exatamente o que está acontecendo com seus computadores e sistemas, explicando a causa real dos problemas com humor inteligente e empatia. Transformamos gargalos tecnológicos em fluxos de trabalho eficientes.</p>
         </div>
         <div class="sobre-image-wrapper" id="sobre-visual-container">
           <div class="sobre-image-container">
-            <img src="assets/images/logo_etk.jpg" alt="Logotipo Это-Тек" id="sobre-logo-visual" style="width: 100%; max-height: 400px; object-fit: cover;">
+            <picture><source srcset="assets/images/logo_etk_440.avif" type="image/avif"><source srcset="assets/images/logo_etk_440.webp" type="image/webp"><img src="assets/images/logo_etk_440.jpg" alt="Logotipo Это-Тек" width="440" height="440" id="sobre-logo-visual" class="sobre-logo-img" fetchpriority="high"></picture>
           </div>
         </div>
       </div>
@@ -145,7 +147,7 @@
             <div class="ig-header">
               <div class="ig-profile">
                 <div class="ig-avatar">
-                  <img src="assets/images/logo_etk.jpg" alt="">
+                  <picture><source srcset="assets/images/logo_etk_80.webp" type="image/webp"><img src="assets/images/logo_etk_80.jpg" alt="" width="80" height="80" loading="lazy" decoding="async"></picture>
                 </div>
                 <span class="ig-username">eto_tek</span>
               </div>
@@ -181,11 +183,11 @@
         <div class="presence-text-content">
           <span class="section-tag">Rede Social</span>
           <h2 class="section-title text-gradient-green" id="instagram-section-title">Acompanhe Nosso Cotidiano</h2>
-          <p style="margin-bottom: 16px;">Mantemos um canal direto de comunicação e educação tecnológica ativa através do nosso <strong>Instagram</strong> oficial.</p>
-          <p style="margin-bottom: 16px;"><strong>Vídeos de Feed e Stories:</strong> Compartilhamos dicas diárias de produtividade, bastidores de reparação de hardware e diagnósticos práticos no formato de "Problema vs. Solução".</p>
-          <p style="margin-bottom: 24px;">Uma forma descontraída e informativa de aproximar você e sua empresa das melhores práticas de tecnologia.</p>
+          <p class="mb-16">Mantemos um canal direto de comunicação e educação tecnológica ativa através do nosso <strong>Instagram</strong> oficial.</p>
+          <p class="mb-16"><strong>Vídeos de Feed e Stories:</strong> Compartilhamos dicas diárias de produtividade, bastidores de reparação de hardware e diagnósticos práticos no formato de "Problema vs. Solução".</p>
+          <p class="mb-24">Uma forma descontraída e informativa de aproximar você e sua empresa das melhores práticas de tecnologia.</p>
           
-          <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <div class="grupo-acoes">
             <a href="https://instagram.com/eto_tek" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="ig-cta-button">Seguir no Instagram<span class="sr-only"> (abre em nova aba)</span></a>
           </div>
         </div>
@@ -200,11 +202,11 @@
         <div class="presence-text-content">
           <span class="section-tag">Avaliações Públicas</span>
           <h2 class="section-title text-gradient-accent" id="google-section-title">Qualidade Comprovada</h2>
-          <p style="margin-bottom: 16px;">A reputação da Это-Тек é construída sobre a satisfação e confiança reais dos nossos clientes particulares e corporativos.</p>
-          <p style="margin-bottom: 16px;"><strong>Feedback Transparente:</strong> Acreditamos que a melhor propaganda é um serviço bem executado. No Google Maps, você pode verificar avaliações detalhadas sobre nosso atendimento rápido, orçamentos honestos e diagnósticos precisos.</p>
-          <p style="margin-bottom: 24px;">Deixe também sua avaliação e ajude a consolidar nosso suporte técnico humanizado e acessível!</p>
+          <p class="mb-16">A reputação da Это-Тек é construída sobre a satisfação e confiança reais dos nossos clientes particulares e corporativos.</p>
+          <p class="mb-16"><strong>Feedback Transparente:</strong> Acreditamos que a melhor propaganda é um serviço bem executado. No Google Maps, você pode verificar avaliações detalhadas sobre nosso atendimento rápido, orçamentos honestos e diagnósticos precisos.</p>
+          <p class="mb-24">Deixe também sua avaliação e ajude a consolidar nosso suporte técnico humanizado e acessível!</p>
           
-          <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <div class="grupo-acoes">
             <a href="https://g.page/r/CdzhImuVLCRQEBM/review" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="google-cta-button">Deixar Avaliação no Google<span class="sr-only"> (abre em nova aba)</span></a>
           </div>
         </div>
@@ -214,7 +216,7 @@
             
             <div class="google-biz-info">
               <div class="google-avatar">
-                <img src="assets/images/logo_etk.jpg" alt="">
+                <picture><source srcset="assets/images/logo_etk_80.webp" type="image/webp"><img src="assets/images/logo_etk_80.jpg" alt="" width="80" height="80" loading="lazy" decoding="async"></picture>
               </div>
               <div class="google-biz-details">
                 <p class="google-biz-nome">Это-Тек</p>
@@ -292,7 +294,7 @@
             
             <div class="olx-header">
               <div class="olx-avatar">
-                <img src="assets/images/logo_etk.jpg" alt="">
+                <picture><source srcset="assets/images/logo_etk_80.webp" type="image/webp"><img src="assets/images/logo_etk_80.jpg" alt="" width="80" height="80" loading="lazy" decoding="async"></picture>
               </div>
               <div class="olx-user-info">
                 <p class="olx-user-nome">Это-Тек <span class="olx-verified-badge">✓ Verificado</span></p>
@@ -331,11 +333,11 @@
         <div class="presence-text-content">
           <span class="section-tag">Vitrine Virtual</span>
           <h2 class="section-title text-gradient-green" id="olx-section-title">Loja Oficial na OLX</h2>
-          <p style="margin-bottom: 16px;">Disponibilizamos equipamentos de informática revisados, upgrades montados sob medida e ofertas especiais diretamente na nossa página oficial na <strong>OLX</strong>.</p>
-          <p style="margin-bottom: 16px;"><strong>Produtos e Serviços Garantidos:</strong> Todos os computadores, peças e periféricos listados passam por testes rigorosos de estresse, higienização interna completa e cable management detalhado antes da entrega.</p>
-          <p style="margin-bottom: 24px;">Encontre hardware de procedência com total garantia e segurança de negociação local.</p>
+          <p class="mb-16">Disponibilizamos equipamentos de informática revisados, upgrades montados sob medida e ofertas especiais diretamente na nossa página oficial na <strong>OLX</strong>.</p>
+          <p class="mb-16"><strong>Produtos e Serviços Garantidos:</strong> Todos os computadores, peças e periféricos listados passam por testes rigorosos de estresse, higienização interna completa e cable management detalhado antes da entrega.</p>
+          <p class="mb-24">Encontre hardware de procedência com total garantia e segurança de negociação local.</p>
           
-          <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <div class="grupo-acoes">
             <a href="https://www.olx.com.br/perfil/eto-tek-90445063" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="olx-cta-button">Visitar Loja na OLX<span class="sr-only"> (abre em nova aba)</span></a>
           </div>
         </div>
@@ -356,8 +358,8 @@
   <footer id="main-footer">
     <div class="container footer-grid">
       <div class="footer-brand" id="footer-brand-container">
-        <a href="index.html" class="logo-link" style="margin-bottom: 8px;">
-          <img src="assets/images/logo_etk.jpg" alt="" class="logo-img">
+        <a href="index.html" class="logo-link mb-8">
+          <picture><source srcset="assets/images/logo_etk_80.webp" type="image/webp"><img src="assets/images/logo_etk_80.jpg" alt="" class="logo-img" width="80" height="80" loading="lazy" decoding="async"></picture>
           <span class="logo-text" lang="ru">Это-Тек</span>
         </a>
         <p class="footer-desc">Soluções digitais em TI, produtividade e suporte tecnológico humanizado de alta performance. Elevando os resultados de particulares e corporações.</p>
@@ -399,7 +401,7 @@
   </footer>
 
   <!-- JS Link -->
-  <script src="js/core.js"></script>
+  <script src="js/core.js" defer></script>
   <script src="js/chatwoot.js" defer></script>
 </body>
 </html>

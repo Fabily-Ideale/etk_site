@@ -118,6 +118,86 @@ body::before {
   border: 0;
 }
 
+picture {
+  display: contents;
+}
+
+body.menu-aberto {
+  overflow: hidden;
+}
+
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.mb-18 {
+  margin-bottom: 18px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+.texto-pequeno {
+  font-size: 0.875rem;
+}
+
+.grupo-acoes {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.icone-tag {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.pillar-card-link-placeholder {
+  color: var(--color-accent);
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 0.875rem;
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sobre-lead {
+  margin-bottom: 18px;
+  font-size: 1.0625rem;
+  color: var(--color-text);
+}
+
+.sobre-logo-img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.servicos-hero-header {
+  max-width: 800px;
+  margin-bottom: 0;
+}
+
+.servicos-hero-desc {
+  margin-top: 12px;
+  font-size: 1rem;
+}
+
 .link-pular {
   position: absolute;
   top: -100px;
@@ -1587,4 +1667,43 @@ footer {
   gap: 24px;
   padding: 24px;
   text-align: center;
+}
+
+@media (max-width: 400px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-logo-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .logo-img {
+    height: 40px;
+  }
+
+  .logo-text {
+    font-size: 1.25rem;
+  }
+}
+
+@supports (height: 100dvh) {
+  body {
+    min-height: 100dvh;
+  }
+
+  .hero-sec {
+    min-height: calc(100dvh - 80px);
+  }
+
+  .pagina-404 {
+    min-height: 100dvh;
+  }
+
+  @media (max-width: 768px) {
+    .nav-menu {
+      height: calc(100dvh - 80px);
+    }
+  }
 }

@@ -24,6 +24,8 @@
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "serviceType": "Serviços de TI", "provider": {"@id": "https://etotek.com.br/#empresa"}, "areaServed": "BR", "url": "https://etotek.com.br/servicos.html"}</script>
   
   <!-- CSS Link -->
+    <link rel="preload" href="assets/fonts/inter_latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/outfit_latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -33,7 +35,7 @@
   <header id="main-header">
     <div class="container nav-container">
       <a href="index.html" class="logo-link" id="nav-logo-link">
-        <img src="assets/images/logo_etk.jpg" alt="" class="logo-img">
+        <picture><source srcset="assets/images/logo_etk_80.webp" type="image/webp"><img src="assets/images/logo_etk_80.jpg" alt="" class="logo-img" width="80" height="80" decoding="async"></picture>
         <span class="logo-text" lang="ru">Это-Тек</span>
       </a>
       
@@ -59,10 +61,10 @@
     <!-- Services Hero Section -->
     <section class="servicos-hero-sec" id="servicos-hero">
       <div class="container">
-        <div class="section-header" style="max-width: 800px; margin-bottom: 0;">
+        <div class="section-header servicos-hero-header">
           <span class="section-tag">Nosso Catálogo</span>
           <h1 class="text-gradient-green" id="servicos-main-title">Soluções Completas sob Demanda.</h1>
-          <p style="margin-top: 12px; font-size: 1rem;">Conheça a grade de especialidades e serviços da Это-Тек. Desenvolvemos soluções com rigor analítico, de forma rápida, e focada em resultados concretos para o seu dia a dia.</p>
+          <p class="servicos-hero-desc">Conheça a grade de especialidades e serviços da Это-Тек. Desenvolvemos soluções com rigor analítico, de forma rápida, e focada em resultados concretos para o seu dia a dia.</p>
         </div>
 
         <div class="servicos-atendimento" id="servicos-atendimento">
@@ -411,8 +413,8 @@
   <footer id="main-footer">
     <div class="container footer-grid">
       <div class="footer-brand" id="footer-brand-container">
-        <a href="index.html" class="logo-link" style="margin-bottom: 8px;">
-          <img src="assets/images/logo_etk.jpg" alt="" class="logo-img">
+        <a href="index.html" class="logo-link mb-8">
+          <picture><source srcset="assets/images/logo_etk_80.webp" type="image/webp"><img src="assets/images/logo_etk_80.jpg" alt="" class="logo-img" width="80" height="80" loading="lazy" decoding="async"></picture>
           <span class="logo-text" lang="ru">Это-Тек</span>
         </a>
         <p class="footer-desc">Soluções digitais em TI, produtividade e suporte tecnológico humanizado de alta performance. Elevando os resultados de particulares e corporações.</p>
@@ -454,7 +456,7 @@
   </footer>
 
   <!-- JS Link -->
-  <script src="js/core.js"></script>
+  <script src="js/core.js" defer></script>
   <script src="js/chatwoot.js" defer></script>
   <script src="js/servicos.js" defer></script>
 </body>
