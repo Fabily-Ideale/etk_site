@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://etotek.com.br/sitemap.xml

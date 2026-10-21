@@ -866,7 +866,10 @@ section {
   object-fit: cover;
 }
 
-.google-biz-details h4 {
+.google-biz-nome {
+  font-family: var(--font-title);
+  font-weight: 700;
+  line-height: 1.2;
   font-size: 16px;
   color: var(--color-text);
   margin-bottom: 2px;
@@ -1020,7 +1023,10 @@ section {
   object-fit: cover;
 }
 
-.olx-user-info h4 {
+.olx-user-nome {
+  font-family: var(--font-title);
+  font-weight: 700;
+  line-height: 1.2;
   font-size: 14px;
   color: var(--color-text);
   margin-bottom: 2px;
@@ -1316,6 +1322,7 @@ footer {
   font-family: var(--font-title);
   font-size: 16px;
   font-weight: 700;
+  line-height: 1.2;
   text-transform: uppercase;
   color: var(--color-text);
   letter-spacing: 0.05em;
@@ -1511,4 +1518,15 @@ footer {
   z-index: -1;
   pointer-events: none;
   background-color: transparent;
+}
+
+.pagina-404 {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 24px;
+  text-align: center;
 }

@@ -1,0 +1,13 @@
+{
+  "name": "Это-Тек | Empresa de TI",
+  "short_name": "Это-Тек",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#040404",
+  "theme_color": "#040404",
+  "icons": [
+    { "src": "/assets/images/icone_192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/images/icone_512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
